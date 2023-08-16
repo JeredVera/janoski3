@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Inicio Sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-card>
+    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <ion-card-header>
+      <ion-card-title class="centrado">Ingreso al App</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ion-input type="email" errorText="Invalid email" ngModel label="Correo Electronico" labelPlacement="floating" placeholder="EJ: janoski@gmail.com"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" label="Contraseña" labelPlacement="floating" placeholder="EJ: Janoski123"></ion-input>
+    </ion-item>
+    <br>
+    <ion-button shape="round" (click)="login()" class="centrado" >Ingresar</ion-button>
+    <ion-button shape="round" (click)="register()"class="centrado" color="danger">Registrarse</ion-button>
+  </ion-card>
+</ion-content>
