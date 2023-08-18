@@ -13,7 +13,16 @@ const routes: Routes = [
   },
   {
     path: 'jugadores',
-    loadChildren: () => import('./pages/jugadores/jugadores.module').then( m => m.JugadoresPageModule)
+    children: [
+      {
+        path: "",
+        loadChildren: () => import('./pages/jugadores/jugadores.module').then( m => m.JugadoresPageModule)
+      },
+      {
+        path: ':id',
+        loadChildren: () => import('./pages/jugadores/detalle/detalle.module').then( m => m.DetallePageModule)
+      }
+    ]
   },
   {
     path: 'equipos',
@@ -47,10 +56,6 @@ const routes: Routes = [
     path: 'fichajes',
     loadChildren: () => import('./pages/fichajes/fichajes.module').then( m => m.FichajesPageModule)
   },
-  {
-    path: 'detalle',
-    loadChildren: () => import('./pages/detalle/detalle.module').then( m => m.DetallePageModule)
-  }
 ];
 
 @NgModule({
