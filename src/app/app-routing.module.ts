@@ -56,6 +56,11 @@ const routes: Routes = [
     path: 'fichajes',
     loadChildren: () => import('./pages/fichajes/fichajes.module').then( m => m.FichajesPageModule)
   },
+  {
+    path: 'agregar',
+    loadChildren: () => import('./pages/jugadores/agregar/agregar.module').then( m => m.AgregarPageModule)
+  },
+
 ];
 
 @NgModule({
