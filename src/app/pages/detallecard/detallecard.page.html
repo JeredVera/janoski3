@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>detallecard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngIf="rickymorty">
+    <img src="{{ rickymorty.image }}" alt="">
+    <ion-card-header>
+      <ion-card-title>{{ rickymorty.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ rickymorty.species }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
